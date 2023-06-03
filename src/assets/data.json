@@ -1,0 +1,112 @@
+[
+  {
+    "id": "1",
+    "type": "Credit",
+    "amount": 14.06,
+    "title": "Apple",
+    "description": "Card Number Used",
+    "date": "06-02-2023",
+    "status": "Pending",
+    "authorized_user": "Diana",
+    "logo": "https://graph.facebook.com/1738146746451570/picture?type=large"
+  },
+  {
+    "id": "2",
+    "type": "Payment",
+    "amount": 174.00,
+    "title": "Payment",
+    "description": "From JPMorgan Chase Bank National",
+    "date": "05-25-2023",
+    "status": "Approved",
+    "authorized_user": "",
+    "logo": "https://graph.facebook.com/1738146746451570/picture?type=large"
+  },
+  {
+    "id": "3",
+    "type": "Credit",
+    "amount": 3.24,
+    "title": "Apple",
+    "description": "Card Number Used",
+    "date": "05-31-2023",
+    "status": "Approved",
+    "authorized_user": "Diana",
+    "logo": "https://graph.facebook.com/1738146746451570/picture?type=large"
+  },
+  {
+    "id": "4",
+    "type": "Payment",
+    "amount": 14.06,
+    "title": "Payment",
+    "description": "From JPMorgan Chase Bank National",
+    "date": "05-30-2023",
+    "status": "Approved",
+    "authorized_user": "",
+    "logo": "https://graph.facebook.com/1738146746451570/picture?type=large"
+  },
+  {
+    "id": "5",
+    "type": "Payment",
+    "amount": 73.58,
+    "title": "Payment",
+    "description": "From JPMorgan Chase Bank National",
+    "date": "06-03-2023",
+    "status": "Approved",
+    "authorized_user": "",
+    "logo": "https://graph.facebook.com/1738146746451570/picture?type=large"
+  },
+  {
+    "id": "6",
+    "type": "Credit",
+    "amount": 24.61,
+    "title": "IKEA",
+    "description": "Round Rock, TX",
+    "date": "02-12-2023",
+    "status": "Approved",
+    "authorized_user": "",
+    "logo": "https://graph.facebook.com/1738146746451570/picture?type=large"
+  },
+  {
+    "id": "7",
+    "type": "Credit",
+    "amount": 73.58,
+    "title": "Target",
+    "description": "Cedar Dark TV",
+    "date": "04-03-2023",
+    "status": "Approved",
+    "authorized_user": "",
+    "logo": "https://graph.facebook.com/1738146746451570/picture?type=large"
+  },
+  {
+    "id": "8",
+    "type": "Credit",
+    "amount": 120.86,
+    "title": "Amazon",
+    "description": "Some Card Number Used",
+    "date": "06-03-2023",
+    "status": "Pending",
+    "authorized_user": "Viola",
+    "logo": "https://graph.facebook.com/1738146746451570/picture?type=large"
+  },
+  {
+    "id": "9",
+    "type": "Credit",
+    "amount": 199.99,
+    "title": "Microsoft",
+    "description": "Some Software Card Number Used",
+    "date": "06-01-2023",
+    "status": "Pending",
+    "authorized_user": "Max",
+    "logo": "https://graph.facebook.com/1738146746451570/picture?type=large"
+  },
+  {
+    "id": "10",
+    "type": "Credit",
+    "amount": 548.95,
+    "title": "Ebay",
+    "description": "Good for home Card Number Used",
+    "date": "09-10-2023",
+    "status": "Approved",
+    "authorized_user": "",
+    "logo": "https://graph.facebook.com/1738146746451570/picture?type=large"
+  }
+]
