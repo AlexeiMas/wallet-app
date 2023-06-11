@@ -1,7 +1,7 @@
-import React from 'react'
 import styled from "styled-components"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import {faCheck} from "@fortawesome/free-solid-svg-icons"
+import {currencyFormat} from "@/features/helpers/functions.ts"
 
 const BriefCardBaseWrapper = styled.div`
   display: flex;
@@ -9,7 +9,7 @@ const BriefCardBaseWrapper = styled.div`
   justify-content: space-between;
   height: 100%;
 `
-const MainBlock = styled.div`
+const MainBlock = styled.div<{my: boolean}>`
   margin: ${({my}) => my ? "auto 0" : "unset"};
   p {
     margin: 0;
@@ -39,7 +39,7 @@ const AdditionalBlock = styled.div`
 
 export type TBriefCardBase = {
   title: string
-  amount?: Intl.NumberFormat
+  amount?: ReturnType<typeof currencyFormat>
   description: string | number
   isAdditional?: boolean
 }

@@ -1,5 +1,4 @@
-import React from 'react'
-import {Link} from 'react-router-dom'
+import {Link, To} from 'react-router-dom'
 import {currencyFormat, getDateFormat} from "@/features/helpers/functions"
 import styled from "styled-components"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
@@ -32,7 +31,7 @@ const DetailHead = ({data}: TItem) => {
   const date = getDateFormat(data.date)
   return (
     <HeadWrapper>
-      <Link to={-1}>
+      <Link to={-1 as To}>
         <FontAwesomeIcon icon={faAngleLeft} size={"2xl"} style={{color: "#007aff"}}/>
       </Link>
       <GroupWrapper>

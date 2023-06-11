@@ -1,4 +1,3 @@
-import React from 'react'
 import Paper from "@/components/UI/Paper"
 import {TPaper} from "@/types/general"
 import {currencyFormat, getCardState} from "@/features/helpers/functions"

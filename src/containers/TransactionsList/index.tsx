@@ -1,4 +1,3 @@
-import React from 'react'
 import BriefSummary from "@/components/BriefSummary"
 import LatestTransactions from "@/components/LatestTransactions"
 

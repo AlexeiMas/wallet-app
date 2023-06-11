@@ -1,4 +1,3 @@
-import React from 'react'
 import {currencyFormat, getDateFormat, getRandomDarkHexColor} from "@/features/helpers/functions"
 import styled from "styled-components"
 import Badge from "@/components/UI/Badge"
@@ -14,7 +13,7 @@ const ItemWrapper = styled(Link)`
   text-decoration: none;
   color: var(--primary-text);
 `
-const IconWrapper = styled.div`
+const IconWrapper = styled.div<{color: ReturnType<typeof getRandomDarkHexColor>}>`
   display: grid;
   place-items: center;
   align-self: center;

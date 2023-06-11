@@ -1,4 +1,4 @@
-import React, {lazy, Suspense} from "react"
+import {lazy, Suspense} from "react"
 import {ERoutes} from "@/types/pages"
 import FlexWrapper from "@/components/FlexWrapper"
 

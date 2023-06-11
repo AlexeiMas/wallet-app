@@ -9,7 +9,7 @@ export const getCardState = (): Record<"balance" | "available", number> => {
   }
 }
 
-export const currencyFormat = (value: number, locale = basicLocale): Intl.NumberFormat => {
+export const currencyFormat = (value: number, locale = basicLocale): string => {
   const formatter = new Intl.NumberFormat(locale, {
     style: 'currency',
     currency: 'USD'
@@ -18,15 +18,15 @@ export const currencyFormat = (value: number, locale = basicLocale): Intl.Number
 }
 
 export const compactFormat = (value: number) => {
-  // return Intl.NumberFormat('en-US', {
-  //   notation: "compact"
-  // }).format(value)
+  return Intl.NumberFormat('en-US', {
+    notation: "compact"
+  }).format(value)
 
   //OR
 
-  return Math.abs(value) > 1000
-    ? Math.sign(value) * ((Math.abs(value) / 1000).toFixed()) + 'K'
-    : Math.sign(value) * Math.abs(value)
+  // return Math.abs(value) > 1000
+  //   ? Math.sign(value) * ((Math.abs(value) / 1000).toFixed()) + 'K'
+  //   : Math.sign(value) * Math.abs(value)
 }
 
 export const getFullMonth = (locale = basicLocale) => {
@@ -42,11 +42,13 @@ export const getDateFormat = (value: string, locale = basicLocale) => {
   const yesterday = new Date()
   yesterday.setDate(today.getDate() - 1)
 
+  const oneWeekInMilliseconds: number = 7 * 24 * 60 * 60 * 1000
+
   if (date.toDateString() === today.toDateString()) {
     return 'Today'
   } else if (date.toDateString() === yesterday.toDateString()) {
     return 'Yesterday'
-  } else if (Math.abs(today - date) <= 7 * 24 * 60 * 60 * 1000) {
+  } else if (Math.abs(today.getTime() - date.getTime()) <= oneWeekInMilliseconds) {
     return date.toLocaleDateString(locale, {weekday: "long"})
   } else {
     return date.toLocaleDateString(locale)
@@ -55,18 +57,26 @@ export const getDateFormat = (value: string, locale = basicLocale) => {
 
 export const getPointsCount = (dayNumber: number) => {
   const arr = [...Array(dayNumber)]
+  const firstDay = 2
+  const secondDay = 3
+  const percentBeforePrevDay = 1
+  const percentPrevDay = 0.6
 
-  const amount = arr.reduce((acc: [number, number, number], _, currentIndex) => {
-    if (currentIndex < 2) {
-      return acc = (currentIndex === 0 ? [2, 0, 2] : [2, 3, 5])
+  let acc = [0, 0, 0]
+  for (let i = 0; i < arr.length; i++) {
+    if (i === 0) {
+      acc = [firstDay, 0, firstDay]
+    } else if (i === 1) {
+      acc = [firstDay, secondDay, firstDay + secondDay]
+    } else {
+      const first = acc[0] * percentBeforePrevDay
+      const second = acc[1] * percentPrevDay
+      const sum = first + second
+      acc = [second, sum, acc[2] + sum]
     }
+  }
 
-    const first = acc[0]
-    const second = acc[1] * 0.6
-    const sum = first + second
-    return acc = [second, sum, acc[2] + sum]
-  }, [0, 0, 0]).at(-1)
-
+  const amount = acc[2]
   return compactFormat(amount)
 }
 

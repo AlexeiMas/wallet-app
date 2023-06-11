@@ -1,4 +1,3 @@
-import React from 'react'
 import styled from "styled-components"
 import CardBalance from "@/components/BriefSummary/CardBalance"
 import NoPaymentDue from "@/components/BriefSummary/NoPaymentDue"

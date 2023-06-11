@@ -1,4 +1,3 @@
-import React from 'react'
 import {TPaper} from "@/types/general"
 import Paper from "@/components/UI/Paper"
 import {getFullMonth} from "@/features/helpers/functions"
